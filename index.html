@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Novus Futura</title>
+  <meta name="description" content="La innovación solo es historia acelerada" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Novus Futura</h1>
+    <p>Bienvenidos, bienvenidas</p>
+    <nav>
+      <a href="#deep-dives">Deep Dives</a>
+      <a href="#perspectivas">Perspectivas</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="deep-dives">
+      <h2>Deep Dives</h2>
+      <p>Artículos largos basados en investigación</p>
+    </section>
+    
+    <section id="perspectivas">
+      <h2>Perspectivas</h2>
+      <p>Piezas cortas de opinión o reflexión</p>
+    </section>
+
+    <section id="sobre-mi">
+      <h2>Sobre mí</h2>
+      <ul id="lista-proyectos"></ul>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <!-- Para formularios sin backend puedes usar servicios como Formspree / Netlify Forms -->
+      <form action="#" method="post" onsubmit="return false;">
+        <label>Tu email <input type="email" required></label>
+        <label>Mensaje <textarea required></textarea></label>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <small>© <span id="anio"></span> Pablo Hernández</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
