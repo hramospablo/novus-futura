@@ -1,12 +1,12 @@
 :root { --max: 900px; --pad: 16px; font: 16px/1.5 system-ui, sans-serif; }
-body { margin:0; color:#222; background:#f7f7f9; }
+body { margin:0; color:#222; background:#F8F4EC; }
 header { background:white; padding: var(--pad); border-bottom:1px solid #eee; position:sticky; top:0; }
-header nav a { margin-right:12px; text-decoration:none; color:#0366d6; }
+header nav a { margin-right:12px; text-decoration:none; color:#1E2A38; }
 main { max-width: var(--max); margin: 24px auto; padding: 0 var(--pad); }
 section { background:white; padding: 20px; margin: 16px 0; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,.04); }
 h1, h2 { margin: 0 0 12px; }
 button { padding: 10px 14px; border:0; border-radius:10px; cursor:pointer; }
 form label { display:block; margin: 8px 0; }
 input, textarea { width:100%; padding:10px; border:1px solid #ddd; border-radius:10px; }
-footer { text-align:center; padding: 24px; color:#666; }
+footer { text-align:center; padding: 24px; color:#1E2A38; }
 @media (max-width:600px) { header nav a { display:inline-block; margin:8px 8px 0 0; } }
