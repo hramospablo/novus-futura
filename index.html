@@ -1,85 +1,115 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Novus Futura</title>
-  <meta name="description" content="La innovación solo es historia acelerada" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Novus Futura — La innovación solo es historia acelerada</title>
+<meta name="description" content="La innovación solo es historia acelerada">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="#top">Novus Futura</a>
-      <nav>
-        <a href="#articulos">Artículos</a>
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#" class="logo">Novus Futura</a>
+    <nav class="main-nav">
+      <a href="#destacados">Destacados</a>
+      <a href="#articulos">Artículos</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a href="https://novusfutura.substack.com" class="boton-suscribir" target="_blank" rel="noopener">Suscríbete</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow">Tecnología · Historia · Innovación</p>
+      <h1>La innovación solo es historia acelerada</h1>
+      <div class="hero-rule" aria-hidden="true"></div>
+      <p class="hero-subtitle">Leo la tecnología del presente a través de la historia: la imprenta, el ferrocarril, la electrificación. Los patrones de adopción se repiten — solo cambia la velocidad.</p>
+      <a href="https://novusfutura.substack.com" class="hero-cta" target="_blank" rel="noopener">Suscríbete en Substack →</a>
     </div>
-  </header>
+  </section>
 
-  <main>
-    <section class="hero" id="top">
-      <p class="eyebrow">Ensayos sobre tecnología, historia e innovación</p>
-      <h1>La innovación solo es<br>historia acelerada</h1>
-      <span class="hero-rule" aria-hidden="true"></span>
-      <p class="hero-sub">Bienvenidos, bienvenidas. Aquí escribo sobre las ideas que están dando forma al futuro, vistas a través de la historia que las precede.</p>
-    </section>
+  <section id="destacados" class="destacados">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Destacados</h2>
+        <p class="section-sub">Los tres artículos por los que empezar.</p>
+      </div>
+      <div id="grid-destacados" class="grid-articulos"></div>
+    </div>
+  </section>
 
-    <section id="articulos" class="articulos">
-      <div class="section-head">
-        <h2>Artículos</h2>
-        <p>Deep dives de investigación y perspectivas breves</p>
+  <section id="articulos" class="articulos">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Todos los artículos</h2>
+        <p class="section-sub">Publicados en Substack. Busca o filtra por tipo.</p>
       </div>
 
       <div class="controles">
         <div class="buscador">
           <label for="buscar" class="visually-hidden">Buscar artículos</label>
-          <input type="search" id="buscar" placeholder="Buscar por título o tema…" autocomplete="off" />
+          <input type="search" id="buscar" name="buscar" placeholder="Buscar por título, tema o etiqueta…" autocomplete="off">
         </div>
         <div class="filtros" role="group" aria-label="Filtrar por tipo de artículo">
-          <button class="filtro activo" data-filtro="todos" type="button">Todos</button>
-          <button class="filtro" data-filtro="deep-dive" type="button">Deep Dives</button>
-          <button class="filtro" data-filtro="perspectiva" type="button">Perspectivas</button>
+          <button type="button" class="filtro-btn is-active" data-filtro="todos">Todos</button>
+          <button type="button" class="filtro-btn" data-filtro="deep-dive">Deep Dives</button>
+          <button type="button" class="filtro-btn" data-filtro="perspectiva">Perspectivas</button>
         </div>
       </div>
 
-      <div id="lista-articulos" class="grid-articulos"></div>
-      <p id="sin-resultados" class="sin-resultados" hidden>No se han encontrado artículos con esos criterios.</p>
-    </section>
+      <div id="grid-articulos" class="grid-articulos"></div>
+      <p id="sin-resultados" class="sin-resultados" hidden>No hay artículos que coincidan con tu búsqueda.</p>
+    </div>
+  </section>
 
-    <section id="sobre-mi">
-      <h2>Sobre mí</h2>
-      <p>Escribo sobre tecnología e historia porque creo que entender de dónde venimos es la mejor forma de anticipar hacia dónde vamos. Soy Pablo Hernández — esto es Novus Futura.</p>
-      <h3>Proyectos</h3>
-      <ul id="lista-proyectos"></ul>
-    </section>
+  <section id="sobre-mi" class="sobre-mi">
+    <div class="container sobre-mi-inner">
+      <div class="sobre-mi-texto">
+        <h2>Sobre mí</h2>
+        <p>Escribo sobre tecnología e historia porque creo que entender de dónde venimos es la mejor forma de anticipar hacia dónde vamos. Soy Pablo Hernández — esto es Novus Futura.</p>
+      </div>
+      <div class="sobre-mi-proyectos">
+        <h3>Proyectos</h3>
+        <ul id="lista-proyectos" class="lista-proyectos"></ul>
+      </div>
+    </div>
+  </section>
 
-    <section id="contacto">
+  <section id="contacto" class="contacto">
+    <div class="container">
       <h2>Contacto</h2>
-      <!-- Para formularios sin backend puedes usar servicios como Formspree / Netlify Forms -->
-      <form action="#" method="post" onsubmit="return false;">
-        <label for="email">Tu email
-          <input type="email" id="email" name="email" required>
-        </label>
-        <label for="mensaje">Mensaje
-          <textarea id="mensaje" name="mensaje" required></textarea>
-        </label>
-        <button type="submit">Enviar</button>
+      <p class="contacto-intro">¿Alguna idea, corrección o simplemente quieres saludar? Escríbeme.</p>
+      <form class="form-contacto" action="https://formspree.io/f/tu-id" method="POST">
+        <div class="campo">
+          <label for="email">Correo electrónico</label>
+          <input type="email" name="email" id="email" required>
+        </div>
+        <div class="campo">
+          <label for="mensaje">Mensaje</label>
+          <textarea name="mensaje" id="mensaje" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="boton-enviar">Enviar mensaje</button>
       </form>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <footer>
-    <small>© <span id="anio"></span> Pablo Hernández</small>
-  </footer>
+</main>
 
-  <script src="script.js"></script>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>Novus Futura — <span id="anio"></span></p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
